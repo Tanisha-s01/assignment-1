@@ -1,0 +1,745 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f3ff;
+    color: #292344;
+    line-height: 1.5;
+}
+
+
+/* NAVIGATION */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #ddd7f5;
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    max-width: 1050px;
+    margin: auto;
+    padding: 12px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #5b45a5;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #494263;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #7658c9;
+}
+
+
+/* HOME */
+
+.hero {
+    max-width: 1050px;
+    margin: auto;
+    padding: 45px 25px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+}
+
+.small-title {
+    color: #7658c9;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    line-height: 1.08;
+    color: #292344;
+}
+
+.hero h1 span {
+    color: #7658c9;
+}
+
+.intro {
+    margin-top: 18px;
+    max-width: 500px;
+    font-size: 1rem;
+    color: #625d76;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #7658c9;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #5b45a5;
+    box-shadow: 0 7px 15px rgba(91, 69, 165, 0.25);
+}
+
+.btn.outline {
+    background: transparent;
+    color: #7658c9;
+    border: 2px solid #7658c9;
+}
+
+
+/* HOME ART */
+
+.hero-art {
+    height: 310px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 40% 40% 15px 15px;
+
+    background: linear-gradient(
+        #ded8ff,
+        #f2efff
+    );
+
+    box-shadow:
+        inset 0 -40px 70px
+        rgba(91, 69, 165, 0.12);
+}
+
+.sun {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #f5c96b;
+    top: 40px;
+    right: 65px;
+
+    box-shadow:
+        0 0 30px rgba(245, 201, 107, 0.5);
+}
+
+.mountain {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+
+    border-left: 145px solid transparent;
+    border-right: 145px solid transparent;
+
+    border-bottom: 190px solid #8b78c7;
+}
+
+.mountain1 {
+    left: -45px;
+}
+
+.mountain2 {
+    right: -80px;
+    border-bottom-color: #6552a0;
+}
+
+.tree {
+    position: absolute;
+    bottom: 12px;
+    font-size: 65px;
+
+    filter:
+        drop-shadow(
+            4px 5px 4px
+            rgba(0, 0, 0, 0.12)
+        );
+}
+
+.tree1 {
+    left: 40px;
+}
+
+.tree2 {
+    left: 135px;
+    font-size: 50px;
+}
+
+.tree3 {
+    right: 35px;
+    font-size: 60px;
+}
+
+.bird {
+    position: absolute;
+    top: 85px;
+    left: 105px;
+    font-size: 35px;
+    transform: rotate(-15deg);
+}
+
+
+/* HIGHLIGHTS */
+
+.highlights {
+    max-width: 1050px;
+    margin: auto;
+    padding: 25px 25px 35px;
+}
+
+.highlights h2 {
+    text-align: center;
+    color: #4c3b88;
+    margin-bottom: 18px;
+    font-size: 1.7rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.nature-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #ded8f2;
+    transition: 0.3s;
+}
+
+.nature-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(91, 69, 165, 0.12);
+}
+
+.icon {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.nature-card h3 {
+    margin-bottom: 6px;
+    color: #5b45a5;
+}
+
+.nature-card p {
+    color: #68627c;
+    font-size: 0.92rem;
+}
+
+
+/* COMMON PAGES */
+
+.page-container {
+    max-width: 950px;
+    margin: auto;
+    padding: 25px 22px;
+}
+
+
+/* PAGE HEADER */
+
+.resume-header,
+.biodata-header {
+    padding: 25px 32px;
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ddd7fa,
+            #f5f2ff
+        );
+
+    margin-bottom: 15px;
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume-header h1,
+.biodata-header h1 {
+    font-size: 2.5rem;
+    color: #49377f;
+}
+
+.resume-header p,
+.biodata-header p {
+    color: #69627d;
+}
+
+.leaf-symbol {
+    font-size: 3.8rem;
+}
+
+
+/* SECTIONS */
+
+.resume-section {
+    background: #ffffff;
+
+    padding: 20px 23px;
+
+    margin-bottom: 12px;
+
+    border-radius: 15px;
+
+    border-left: 5px solid #7658c9;
+
+    box-shadow:
+        0 4px 15px
+        rgba(91, 69, 165, 0.07);
+}
+
+.resume-section h2 {
+    color: #59449d;
+    margin-bottom: 8px;
+    font-size: 1.35rem;
+}
+
+
+/* TIMELINE */
+
+.timeline {
+    border-left: 2px solid #b9ace5;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #7658c9;
+
+    left: -27px;
+    top: 6px;
+}
+
+.timeline-item h3 {
+    color: #4f3d8b;
+    font-size: 1rem;
+}
+
+.timeline-item span {
+    color: #817a94;
+    font-size: 0.82rem;
+}
+
+.timeline-item p {
+    font-size: 0.9rem;
+}
+
+
+/* SKILLS */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills span {
+    padding: 6px 13px;
+    border-radius: 18px;
+
+    background: #eeeaff;
+
+    color: #59449d;
+
+    font-weight: 600;
+
+    font-size: 0.85rem;
+}
+
+
+/* PROJECTS */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+}
+
+.project-card {
+    padding: 16px;
+
+    background: #f7f5ff;
+
+    border-radius: 12px;
+
+    border: 1px solid #e0dbf2;
+}
+
+.project-card h3 {
+    color: #59449d;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.project-card p {
+    font-size: 0.88rem;
+}
+
+
+/* LIST */
+
+.styled-list {
+    list-style: none;
+}
+
+.styled-list li {
+    padding: 3px 0;
+    font-size: 0.9rem;
+}
+
+.styled-list li::before {
+    content: "✓ ";
+
+    color: #7658c9;
+
+    font-weight: bold;
+}
+
+
+/* CONTACT */
+
+.contact-box {
+    text-align: center;
+
+    padding: 22px;
+
+    margin-top: 15px;
+
+    border-radius: 18px;
+
+    background: #40336e;
+
+    color: white;
+}
+
+.contact-box h2 {
+    margin-bottom: 5px;
+}
+
+.contact-box button {
+    margin-top: 10px;
+
+    padding: 9px 22px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    cursor: pointer;
+
+    background: #e3ddff;
+
+    color: #49377f;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.contact-box button:hover {
+    transform: scale(1.05);
+}
+
+
+/* BIODATA */
+
+.biodata-card {
+    display: grid;
+
+    grid-template-columns: 170px 1fr;
+
+    gap: 25px;
+
+    align-items: center;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(91, 69, 165, 0.08);
+
+    margin-bottom: 12px;
+}
+
+.profile-circle {
+    width: 125px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8971d1,
+            #51418d
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 2.4rem;
+
+    font-weight: bold;
+}
+
+.personal-details h2 {
+    color: #59449d;
+
+    margin-bottom: 8px;
+
+    font-size: 1.3rem;
+}
+
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 7px 9px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e5e0f0;
+
+    font-size: 0.88rem;
+}
+
+th {
+    color: #6750ae;
+    width: 32%;
+}
+
+
+/* INTERESTS */
+
+.interest-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 9px;
+}
+
+.interest-grid div {
+    padding: 11px;
+
+    text-align: center;
+
+    background: #f0edff;
+
+    border-radius: 11px;
+
+    font-weight: 600;
+
+    color: #59449d;
+
+    font-size: 0.9rem;
+}
+
+.hobby-text {
+    font-size: 0.92rem;
+    color: #68627c;
+}
+
+
+/* DECLARATION */
+
+.declaration {
+    padding: 20px;
+
+    background: #eeebfb;
+
+    border-radius: 15px;
+
+    margin-top: 12px;
+}
+
+.declaration h2 {
+    color: #59449d;
+    margin-bottom: 7px;
+}
+
+.declaration p {
+    font-size: 0.9rem;
+}
+
+.signature {
+    margin-top: 15px;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 15px;
+
+    background: #292344;
+
+    color: #e4dfff;
+
+    margin-top: 12px;
+
+    font-size: 0.85rem;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .hero-art {
+        height: 270px;
+    }
+
+    .card-container,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .biodata-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-circle {
+        margin: auto;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .resume-header h1,
+    .biodata-header h1 {
+        font-size: 2rem;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
